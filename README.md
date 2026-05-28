@@ -21,12 +21,14 @@
 
 1. **加速度總能量標準差 ($accel\_std$)**：
    消除重力變異，計算三軸加速度合向量變異數。
+   
    $$mag_t = \sqrt{x_t^2 + y_t^2 + z_t^2} - 9.81$$
    $$accel\_std = \text{Standard Deviation}(mag) \text{ over 1-second interval}$$
 
-2. **陀螺儀角速度標準差 ($gyro\_std$)**：
+3. **陀螺儀角速度標準差 ($gyro\_std$)**：
    用於監測手機絕對空間旋轉。**注意：不使用易受車廂高壓電磁干擾的電子羅盤（磁力計），改用純慣性元件陀螺儀以阻絕電磁雜訊。**
-   $$gyro\_mag_t = \sqrt{gyro\_x_t^2 + gyro\_y_t^2 + gyro\_z_t^2}$$
+   
+   $$gyro_{\text{mag}, t} = \sqrt{gyro_{x, t}^2 + gyro_{y, t}^2 + gyro_{z, t}^2}$$
    $$gyro\_std = \text{Standard Deviation}(gyro\_mag) \text{ over 1-second interval}$$
 
 ### 2.2 三大核心防禦特徵工程
